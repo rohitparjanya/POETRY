@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+        <link rel="stylesheet" href="./css/styleshome.css">
+        
+    </head>
+    <body>
+        <!-- title -->
+        <div id="container">
+
+
+        <div id="title-App">
+                <span class="title-text" id="POE">POE</span><br>
+                <a href="" id="link-for-form"><span class="title-text" id="TRY" data-title="TRY">TRY</span></a>
+        </div>
+
+        </div>
+        <div id="form-content">
+            <form>
+                <div class="form-fields">
+                    <input type="text" name="User-Name" class="input-text" placeholder="Username" required>
+                    <input type="text" name="Password" class="input-text" placeholder="Password" required>
+                </div>
+                <div class="form-fields">
+                    <button class="input-text">LOGIN</button>
+                    <button class="input-text">SIGNUP</button>
+                </div>
+            </form>
+        </div>
+        <div>
+            <span id="footer-quote">
+                <p style="margin-left: 2%;" id="foo"></p> 
+            </span>
+
+        </div>
+        <script>
+            var i=0;
+            var txt="bad poetry springs from genuine feeling.~Oscar Wilde";
+            var speed=60;
+            function typeWriter() {
+            if (i < txt.length) {
+                document.getElementById("foo").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+            }
+            typeWriter();
+        </script>
+        
+    </body>
+</html>
