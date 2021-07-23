@@ -6,7 +6,8 @@ const app = express();
 //use express router
 
 app.use('/',require('./routes'));
-
+app.set('view engine','ejs');
+app.set('views','./views');
 
 
 app.listen(port,function(err){
@@ -14,5 +15,5 @@ app.listen(port,function(err){
         console.log(`error!!!:${err}`);
     }
 
-    console.log(`surver is up : ${port}`);
+    console.log(`server is up : ${port}`);
 })
