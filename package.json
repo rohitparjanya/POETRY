@@ -1,0 +1,20 @@
+{
+  "name": "ptod",
+  "version": "1.0.0",
+  "description": "SocialWebsite",
+  "main": "index.js",
+  "scripts": {
+    "start":"nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "poetry",
+    "social",
+    "media"
+  ],
+  "author": "rohith parjanya",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
