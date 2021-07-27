@@ -3,9 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
-
         <link rel="stylesheet" href="./css/styleshome.css">
-        
+
     </head>
     <body>
         <!-- title -->
@@ -19,14 +18,14 @@
 
         </div>
         <div id="form-content">
-            <form>
+            <form action="/users/create-session" method="POST">
                 <div class="form-fields">
-                    <input type="text" name="User-Name" class="input-text" placeholder="Username" required>
-                    <input type="text" name="Password" class="input-text" placeholder="Password" required>
+                    <input type="email" name="email" class="input-text" placeholder="email" required>
+                    <input type="password" name="password" class="input-text" placeholder="Password" required>
                 </div>
                 <div class="form-fields">
-                    <button class="input-text">LOGIN</button>
-                    <button class="input-text">SIGNUP</button>
+                    <input class="input-text"value="LOGIN" type="submit">
+                    <input class="input-text"value="SIGNIN" type="submit">
                 </div>
             </form>
         </div>

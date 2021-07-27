@@ -1,11 +1,19 @@
 const express = require('express');
+const cookieparser = require('cookie-parser');
 const port = 8000;
 const app = express();
 
 const db = require('./config/mongoose');
 
+//middle ware
+app.use(express.urlencoded());
+
+app.use(cookieparser());
+
+
 //for saying app to use static files from here
-app.use(express.static('./assets/'));
+app.use(express.static('./assets'));
+
 
 //use express router
 app.use('/',require('./routes'));

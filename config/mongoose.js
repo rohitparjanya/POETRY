@@ -1,4 +1,3 @@
-const { builtinModules } = require('module');
 const mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost/POETRY_development');
