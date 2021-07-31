@@ -10,14 +10,13 @@ body{
     justify-content: center;
     align-items: center;
 }
-a{
-    text-decoration: none;
-}
 ::placeholder{
-    color: #9e005c;
+    color: #52074b;
     text-align: center;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
 
 #for-quote{
     display: flex;
@@ -42,8 +41,24 @@ a{
 
 #sign-in-div{
     margin-top:2px;
-    height: 50vh;
-    width: 60vw;
+    width: 60%;
     border-radius: 30px;
     background-color: #52074b;
+}
+
+#form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputs{
+    margin-top: 0.25cm;
+    margin-bottom: 0.25cm;
+    width: 2.5in;
+    background:linear-gradient(#b8034f,#d40e5a);
+    border-radius: 8px;
+    font-weight: bold;
+    color: #52074b;
 }

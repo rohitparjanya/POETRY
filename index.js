@@ -4,6 +4,11 @@ const port = 8000;
 const app = express();
 
 const db = require('./config/mongoose');
+const session = require('express-session');
+const passport= require('passport');
+const passportLocal = require('./config/passport-local-stategy');
+
+
 
 //middle ware
 app.use(express.urlencoded());
@@ -15,12 +20,30 @@ app.use(cookieparser());
 app.use(express.static('./assets'));
 
 
-//use express router
-app.use('/',require('./routes'));
+
 
 //set up views
 app.set('view engine','ejs');
 app.set('views','./views');
+
+
+app.use(session({
+    name:'ptod',
+    //todo change the secret code
+    secret:"helloworld",
+    saveUninitialized:false,
+    resave:false,
+    cookie: {
+        maxAge:(1000 *60 * 100)
+    }
+
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+//use express router
+app.use('/',require('./routes'));
 
 //server listening to this post
 app.listen(port,function(err){

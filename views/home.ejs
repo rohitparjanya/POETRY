@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <link rel="stylesheet" href="./css/styleshome.css">
+        
 
     </head>
     <body>
@@ -25,7 +26,7 @@
                 </div>
                 <div class="form-fields">
                     <input class="input-text"value="LOGIN" type="submit">
-                    <input class="input-text"value="SIGNIN" type="submit">
+                    <button class="input-text" id="signin">SIGNIN</button>
                 </div>
             </form>
         </div>
@@ -47,6 +48,11 @@
             }
             }
             typeWriter();
+
+            var signinButton = document.getElementById("signin");
+            signinButton.onclick = function () {
+                location.href = '/users/sign-In';
+            };
         </script>
         
     </body>
