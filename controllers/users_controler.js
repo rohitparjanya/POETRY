@@ -29,5 +29,17 @@ module.exports.create = function(req, res){
 
 // sign in and create a session for the user
 module.exports.createSession = function(req, res){
+    return res.render('wall',{ 
+    });
+}
+
+//user profile
+module.exports.profile = function ( req, res){
+    return res.render('profile',{});
+}
+
+//destroysession
+module.exports.destroysession = function(req,res){
+    req.logout();
     return res.redirect('/');
 }
