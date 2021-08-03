@@ -16,17 +16,25 @@
 
         <div id="writers-area">
             <div id= "writers-text">
-                <form action="" method="POST">
+                
+                <form action="/posts/create" method="POST">
                 <textarea name="content" cols="30" rows="4" placeholder="shuru karo!">
                 </textarea>
                 <input type="submit" value="POST">
                 </form>
             </div>
-            
-
-
-
-
+            <div>
+                <ul>
+                    <% for (post of posts){%>
+                        <li>
+                            <%=post.content%>
+                            <!-- <small>
+                                <%= post.user%>
+                            </small> -->
+                        </li>
+                    <%}%>
+                </ul>
+            </div>
         </div>
         
         <a href="/users/sign-out">Sign-out</a>

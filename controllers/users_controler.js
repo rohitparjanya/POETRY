@@ -1,4 +1,5 @@
 const User = require("../models/user");
+const Post = require('../models/post');
 
 module.exports.signIn = function(req,res){
     return res.render('sign_in',{
@@ -29,8 +30,20 @@ module.exports.create = function(req, res){
 
 // sign in and create a session for the user
 module.exports.createSession = function(req, res){
-    return res.render('wall',{ 
-    });
+    Post.find({},function(err,posts){
+
+        return res.render('wall',{ 
+            posts: posts
+        });
+
+    })
+    
+    // Post.find({}).populate('user').exec(function(err,posts){
+    //     return res.render('wall',{ 
+    //         posts: posts
+    //     });
+    // })
+    
 }
 
 //user profile
