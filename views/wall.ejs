@@ -31,10 +31,16 @@
                             <!-- <small>
                                 <%= post.user%>
                             </small> -->
+                            <form action="/comments/create" method="POST">
+                                <input type="text" name="content" placeholder="Type Here to add comment...">
+                                <input type="hidden" name="post" value="<%= post._id %>" >
+                                <input type="submit" value="Add Comment">
+                            </form>
                         </li>
                     <%}%>
                 </ul>
             </div>
+            
         </div>
         
         <a href="/users/sign-out">Sign-out</a>
