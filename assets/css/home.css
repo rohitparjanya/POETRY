@@ -1,0 +1,18 @@
+#home-container {
+  display: flex; }
+  #home-container #feed-posts {
+    width: 70%;
+    padding: 10px; }
+  #home-container #user-friends {
+    width: 30%;
+    padding: 10px;
+    border-left: 2px solid lightgrey;
+    height: 100%; }
+
+.textarea {
+  text-align: center; }
+
+.headings {
+  font-weight: bolder;
+  font-size: larger;
+  text-transform: capitalize; }

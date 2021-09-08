@@ -1,0 +1,25 @@
+#layout-footer{
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    color: rgb(60, 40, 238);
+    a{
+        color: rgb(60, 40, 238);
+        text-decoration: none;
+    }
+
+    background: rgb(195, 245, 154);
+    padding: 5px 10px;
+    display: flex;
+    justify-content: flex-start;
+
+    .footer-nav{
+        ul{
+            list-style: none;
+            display: flex;
+            li{
+                margin-left: 5px;
+            }
+        }
+    }
+}

@@ -1,59 +1,39 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <link rel="stylesheet" href="./css/styleshome.css">
+<link rel="stylesheet" href="/css/home.css">
+
+<div id="home-container">
+    <section id="feed-posts">
+        <div class="textarea">
+            <h4 class="headings">Posts</h4>
+                <% if(locals.user){ %>
+                    
+                        <form action="/posts/create" id="new-post-form" method="POST">
+                            <textarea name="content" cols="50" rows="5" placeholder="Type Here..." required></textarea>
+                            <input type="submit" value="Post">
+                        </form>
+            <% } %>
+        </div>
         
-
-    </head>
-    <body>
-        <!-- title -->
-        <div id="container">
-
-
-        <div id="title-App">
-                <span class="title-text" id="POE">POE</span><br>
-                <a href="" id="link-for-form"><span class="title-text" id="TRY" data-title="TRY">TRY</span></a>
-        </div>
-
-        </div>
-        <div id="form-content">
-            <form action="/users/create-session" method="POST">
-                <div class="form-fields">
-                    <input type="email" name="email" class="input-text" placeholder="email" required>
-                    <input type="password" name="password" class="input-text" placeholder="Password" required>
-                </div>
-                <div class="form-fields">
-                    <input class="input-text"value="LOGIN" type="submit">
-                    <button class="input-text" id="signin">SIGNIN</button>
-                </div>
-            </form>
-        </div>
-        <div>
-            <span id="footer-quote">
-                <p style="margin-left: 2%;" id="foo"></p> 
-            </span>
-
-        </div>
-        <script>
-            var i=0;
-            var txt="bad poetry springs from genuine feeling.~Oscar Wilde";
-            var speed=60;
-            function typeWriter() {
-            if (i < txt.length) {
-                document.getElementById("foo").innerHTML += txt.charAt(i);
-                i++;
-                setTimeout(typeWriter, speed);
-            }
-            }
-            typeWriter();
-
-            var signinButton = document.getElementById("signin");
-            signinButton.onclick = function () {
-                location.href = '/users/sign-In';
-            };
-        </script>
+            <div id="posts-list-container">
+                <ul>
+                    <% for(post of posts){ %>
+                        
+                    <%- include('_post') -%>
+                        
+                    <%} %>
+                </ul>
+            </div>
+    </section>
         
-    </body>
-</html>
+        
+        <section id="user-friends">
+            <div class="textarea">
+            <h4 class="headings">Users</h4>
+            <% for(u of all_users){%>
+                <p>
+                    <a href="/users/profile/<%= u.id %>"><%= u.name %></a>
+                </p>
+            <% } %>
+            </div>
+        </section>
+</div>
+

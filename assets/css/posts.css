@@ -1,0 +1,18 @@
+#each-post {
+  background-color: #80ebdc;
+  border-radius: 7px;
+  box-shadow: 1px 1px 1px 1px #bbb3b3; }
+  #each-post li {
+    list-style: none; }
+    #each-post li p {
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: bolder; }
+
+.post-comments {
+  text-align: right; }
+
+#posts-list-container {
+  text-align: left; }
+
+.comment-textbox {
+  border-radius: 10px; }

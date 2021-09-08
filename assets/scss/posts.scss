@@ -1,0 +1,23 @@
+#each-post{
+    background-color: rgb(128, 235, 220);
+    border-radius: 7px;
+    box-shadow: 1px 1px 1px 1px rgb(187, 179, 179);
+    li{
+     list-style: none;
+     p{
+         font-family: 'Courier New', Courier, monospace;
+         font-weight: bolder;
+     }
+    }
+}
+.post-comments{
+    text-align: right;
+}
+
+#posts-list-container{
+    text-align: left;
+}
+
+.comment-textbox{
+    border-radius: 10px;
+}

@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>
+            <%= title  %>
+        </title>
+        <link rel="stylesheet" href="/css/layout.css">
+        <link rel="stylesheet" href="/css/header.css">
+        <link rel="stylesheet" href="/css/signinandup.css">
+        <link rel="stylesheet" href="/css/footer.css">
+        <link rel="stylesheet" href="/css/posts.css">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <%- style %>
+        
+    </head>
+
+    <body>
+        <%- include('_header'); %>
+        
+        <main id="layout-main">
+            <%-include('_topQuote');%>
+            <%- body %>
+        </main>
+
+        <%- include('_footer'); %>
+        <%- script %>
+        
+    </body>
+</html>

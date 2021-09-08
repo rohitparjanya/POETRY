@@ -1,0 +1,20 @@
+#home-quote {
+  display: flex;
+  flex-direction: row; }
+
+#top-quote {
+  background-color: #80ebdc;
+  box-shadow: 1px 1px 1px 1px rgba(145, 138, 138, 0.979);
+  align-items: center;
+  height: 2in;
+  margin: 10px;
+  width: 5in;
+  border-radius: 10px; }
+  #top-quote p {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    text-transform: capitalize;
+    text-align: center; }
+
+.underline {
+  text-decoration: underline 3px; }
